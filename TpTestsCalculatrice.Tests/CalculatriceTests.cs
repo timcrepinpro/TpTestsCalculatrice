@@ -28,17 +28,17 @@ public class CalculatriceTests
         double resultat = calc.Division(10, 2);
         Assert.AreEqual(5, resultat);
     }
-/*
+
     [TestMethod]
     public void Division_LeveUneException_SiDivisionParZero()
     {
         Calculatrice calc = new Calculatrice();
-        Assert.ThrowsException<Exception>(() => 
+        Assert.Throws<Exception>(() => 
         {
             calc.Division(10, 0);
         });
     }
-*/   
+ 
 
     [TestMethod]
     public void EstPair_RetourneTrue_SiNombrePair()
@@ -75,6 +75,19 @@ public class CalculatriceTests
         Calculatrice calc = new Calculatrice();
         double resultat = calc.Addition(100, 200);
         Assert.AreEqual(300, resultat);        
+    }
+
+    [TestMethod]
+    public void max_retourne()
+    {
+        Calculatrice calc = new Calculatrice();
+        int resultat = calc.Max(3, 7);
+        Assert.AreEqual(7, resultat);
+        resultat = calc.Max(10, 2);
+        Assert.AreEqual(10, resultat);
+        resultat = calc.Max(5, 5);
+        Assert.AreEqual(5, resultat);
+        
     }
  
 
